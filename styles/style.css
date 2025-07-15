@@ -52,12 +52,12 @@ ol {
 }
 
 .content {
+  inset: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 1140px;
   margin: auto;
-  inset: 0;
 }
 
 .result {
@@ -86,8 +86,8 @@ ol {
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  border: none;
   gap: 5px;
+  border: none;
 }
 
 .content__list-container {
@@ -100,9 +100,9 @@ ol {
 }
 
 .content__list {
-  gap: 25px;
   display: flex;
   flex-direction: column;
+  gap: 25px;
 }
 
 .content__details {
@@ -193,8 +193,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  gap: 5px;
   align-items: center;
+  gap: 5px;
   width: fit-content;
 }
 
@@ -272,8 +272,8 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
   align-self: flex-end;
+  width: 194px;
 }
 
 .more-button {
