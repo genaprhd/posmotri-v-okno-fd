@@ -43,6 +43,11 @@ ol {
   list-style: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -71,8 +76,8 @@ ol {
 }
 
 .result__video-container {
-  width: 711px;
   position: relative;
+  width: 711px;
   height: 386px;
   margin-bottom: 16px;
 }
@@ -97,12 +102,12 @@ ol {
 }
 
 .content__list-container {
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: column;
   gap: 35px;
   height: 298px;
-  margin-top: 26px;
+  margin-top: 18px;
   overflow: auto;
 }
 
@@ -113,17 +118,19 @@ ol {
 }
 
 .content__details {
-  height: 100%;
+  width: 399px;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  max-height: 103px;
-  width: 100%;}
+  width: 100%;
+  overflow: hidden;
+}
 
 .content__video-card-thumbnail {
-  max-width: 194px;
+  height: 103px;
+  width: 194px;
   object-fit: cover;
   object-position: center;
 }
@@ -133,15 +140,20 @@ ol {
 }
 
 .content__video-card-description {
+  --webkit-line-clamp: 3;
+  --moz-line-clamp: 3;
+  overflow: hidden;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16px;
+  text-overflow: ellipsis;
+  line-clamp: 3;
 }
 
 .search-form__fieldset-title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -163,7 +175,7 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 70px;
+  line-height: 71px;
   text-transform: uppercase;
 }
 
@@ -177,15 +189,6 @@ ol {
 
 .content__list-item:has(.content__card-link_current) {
   background-color: #545050;
-}
-
-
-.content__list-link:active {
-  background-color: #545050;
-}
-
-.content__list-link:hover {
-  text-decoration: underline;
 }
 
 .content__video-card-description-container {
@@ -257,7 +260,6 @@ ol {
 
 .content__list-item:has(.content__card-link:focus-visible) {
   outline: 1px solid #fff;
-
 }
 
 .search-form__pseudo-checkbox::after {
@@ -274,7 +276,6 @@ ol {
 }
 
 .button {
-  appearance: none;
   min-height: 34px;
   border: 1px solid #fff;
   color: #fff;
@@ -282,6 +283,7 @@ ol {
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
+  appearance: none;
 }
 
 .button:active {
@@ -293,7 +295,7 @@ ol {
   cursor: pointer;
 }
 
-.button:focus-visible{
+.button:focus-visible {
   outline: 1px solid #fff;
 }
 
@@ -305,4 +307,17 @@ ol {
 .more-button {
   align-self: center;
   width: 100%;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+a.content__video-card-link:active {
+  background-color: #545050;
 }
